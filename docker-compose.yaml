@@ -5,7 +5,7 @@ version: '3'
 services:
   # membuat services atau container bernama item-app untuk aplikasi web berbasis node js
   item-app:
-    # mengunduh image item-app:v1 dari ghcr.io dengan user Swildz
+    # mengunduh image item-app:v1 dari ghcr.io dengan user swildz
     image: ghcr.io/swildz/item-app:v1
     # Menerapkan restart policy pada berkas docker-compose.yml agar container selalu restart ketika terhenti
     restart: always
