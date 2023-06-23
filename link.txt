@@ -1,5 +1,2 @@
-github    :
-org.opencontainers.image.source = "https://github.com/Swildz/a433-microservices-architecture"
-
 dockerhub :
 https://hub.docker.com/r/1901082003/item-app
