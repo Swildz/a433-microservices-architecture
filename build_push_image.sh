@@ -12,7 +12,7 @@ docker images
 docker image tag item-app:v1 ghcr.io/swildz/item-app:v1
 
 # login ke github packages
-docker login ghcr.io -u swildz -p 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
+echo $PASSWORD_DOCKER_HUB | docker login -u swildz --password-stdin ghcr.io
 
 # push atau mengunggah image ke github packages
 docker push ghcr.io/swildz/item-app:v1
