@@ -1,2 +1,7 @@
+github :
+https://github.com/Swildz/a433-microservices-architecture/pkgs/container/item-app
+
+docker pull ghcr.io/swildz/item-app:v1
+
 dockerhub :
 https://hub.docker.com/r/1901082003/item-app
