@@ -16,3 +16,6 @@ echo $PASSWORD_DOCKER_HUB | docker login -u swildz --password-stdin ghcr.io
 
 # push atau mengunggah image ke github packages
 docker push ghcr.io/swildz/item-app:v1
+
+#push image to docker
+docker push 1901082003/item-app:v1
