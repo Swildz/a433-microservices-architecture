@@ -2,28 +2,28 @@
 version: "3.7"
 
 services:
-  # create item-app service
+  # menamai item-app service
   item-app:
     image: ghcr.io/swildz/item-app:v1
+     # menlakukan map port host 80 ke 8080 port container
     ports:
-      # expose port 8080 from port 80
       - 80:8080
-    deploy:
-      restart_policy:
-        # alway restart on stop
-        condition: always
+  # container akan terus restart bila mati
+    restart: always
+  # menunggu sampai item-db hidup
+    depends_on:
+      - "item-db"
 
-  # create item-dv service
+  # menamai service sebagai item-db
   item-db:
+  # menggunakan mongo v3
     image: mongo:3
+  # mounting volume app-db ke /data/db
     volumes:
-      # mount app-db volume to /data/db
       - app-db:/data/db
-    deploy:
-      restart_policy:
-        # alway restart on stop
-        condition: always
+  # container akan terus restart bila mati
+    restart: always
 
+#Mendefinisikan volume app-db untuk di mount
 volumes:
-  # create volumes
   app-db:
