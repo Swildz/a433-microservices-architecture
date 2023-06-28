@@ -1,0 +1,7 @@
+#frontend
+docker pull ghcr.io/swildz/karsajobs-ui:latest
+https://github.com/Swildz/a433-microservices-architecture/pkgs/container/karsajobs-ui
+
+#backend
+https://github.com/Swildz/a433-microservices-architecture/pkgs/container/karsajobs
+docker pull ghcr.io/swildz/karsajobs:latest
