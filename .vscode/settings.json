@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "kubernetes://schema/v1%40persistentvolumeclaim": "file:///home/siddiq/DevOps/a433-microservices-architecture/mongodb/mongo-pv-pvc.yml"
+    }
+}

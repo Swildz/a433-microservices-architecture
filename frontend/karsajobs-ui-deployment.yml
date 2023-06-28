@@ -1,27 +1,37 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  # mementukan namespace menggunakan ns karsajobs
+  namespace: karsajobs-ns
+  # memamai Deployment
   name: karsajobs-ui
+  # membuat label
   labels:
     app: karsajobs-ui
-    tier: frontend
+
 spec:
-  replicas: 1
+  #menentukan jumlah replikasi
+  replicas: 2
   selector:
     matchLabels:
-      tier: frontend
+      # menetukan agar sesuai label
+      app: karsajobs-ui
+
   template:
     metadata:
+      namespace: karsajobs-ns
       labels:
         app: karsajobs-ui
-        tier: frontend
+
     spec:
+      # Medefinisikan kriteria container yang akan dijalankan
       containers:
-      - name: karsajobs-ui
-        image: "ghcr.io/swildz/karsajobs-ui:latest"
-        imagePullPolicy: IfNotPresent
-        ports:
-          - containerPort: 8000
-        env:
-          - name: VUE_APP_BACKEND
-            value: "http://192.168.49.2:32150"
+        - name: karsajobs-frontend
+          # Menggunakan image dari Github
+          image: ghcr.io/swildz/karsajobs-ui:latest
+          ports:
+            - containerPort: 8000
+          # Mendefinisikan env
+          env:
+            - name: VUE_APP_BACKEND
+              value: http://192.168.58.2:30837

@@ -1,7 +1,7 @@
-# Membuat Namespace karsajobs-ns
+# Membuat Namespace monitoring
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: karsajobs-ns
+  name: monitoring
   labels:
     app: webserver
