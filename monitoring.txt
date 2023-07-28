@@ -1,22 +1,27 @@
-NAME                                       READY   STATUS    RESTARTS   AGE
-pod/karsajobs-backend-dp-84c5c5dc5-4ptfq   1/1     Running   0          3m16s
-pod/karsajobs-backend-dp-84c5c5dc5-62v6s   1/1     Running   0          3m16s
-pod/karsajobs-ui-7fcf5db8c-bmdnk           1/1     Running   0          2m26s
-pod/karsajobs-ui-7fcf5db8c-frv6f           1/1     Running   0          2m26s
-pod/mongo-0                                1/1     Running   0          60s
+NAME                                       READY   STATUS    RESTARTS       AGE
+pod/karsajobs-backend-dp-84c5c5dc5-4ptfq   1/1     Running   3 (116m ago)   28d
+pod/karsajobs-backend-dp-84c5c5dc5-62v6s   1/1     Running   3 (116m ago)   28d
+pod/karsajobs-ui-5bc8cf7f6d-j46l5          1/1     Running   0              26m
+pod/karsajobs-ui-5bc8cf7f6d-tv5ft          1/1     Running   0              26m
+pod/mongo-0                                1/1     Running   3 (116m ago)   28d
 
 NAME                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
-service/karsajobs      NodePort    10.107.221.235   <none>        8080:31908/TCP   3m20s
-service/karsajobs-ui   NodePort    10.111.117.14    <none>        8000:30979/TCP   2m31s
-service/mongo          ClusterIP   None             <none>        27017/TCP        102s
+service/karsajobs      NodePort    10.107.221.235   <none>        8080:31908/TCP   28d
+service/karsajobs-ui   NodePort    10.111.117.14    <none>        8000:30979/TCP   28d
+service/mongo          ClusterIP   None             <none>        27017/TCP        28d
 
 NAME                                   READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/karsajobs-backend-dp   2/2     2            2           3m16s
-deployment.apps/karsajobs-ui           2/2     2            2           2m26s
+deployment.apps/karsajobs-backend-dp   2/2     2            2           28d
+deployment.apps/karsajobs-ui           2/2     2            2           28d
 
 NAME                                             DESIRED   CURRENT   READY   AGE
-replicaset.apps/karsajobs-backend-dp-84c5c5dc5   2         2         2       3m16s
-replicaset.apps/karsajobs-ui-7fcf5db8c           2         2         2       2m26s
+replicaset.apps/karsajobs-backend-dp-84c5c5dc5   2         2         2       28d
+replicaset.apps/karsajobs-ui-54b9b99568          0         0         0       78m
+replicaset.apps/karsajobs-ui-5bc8cf7f6d          2         2         2       26m
+replicaset.apps/karsajobs-ui-5db6b94dfb          0         0         0       28d
+replicaset.apps/karsajobs-ui-7fcf5db8c           0         0         0       28d
+replicaset.apps/karsajobs-ui-84b4dcc9b5          0         0         0       28d
+replicaset.apps/karsajobs-ui-f967d99fd           0         0         0       28d
 
 NAME                     READY   AGE
-statefulset.apps/mongo   1/1     61s
+statefulset.apps/mongo   1/1     28d
