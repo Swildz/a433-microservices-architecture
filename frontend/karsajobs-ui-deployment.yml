@@ -34,4 +34,4 @@ spec:
           # Mendefinisikan env
           env:
             - name: VUE_APP_BACKEND
-              value: http://127.0.0.1:41453
+              value: http://127.0.0.1:37845
